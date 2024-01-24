@@ -1,0 +1,140 @@
+.icon {
+  position: relative;
+  top: 723px;
+  left: 43%; /* Используйте абсолютное значение в пикселях */
+  border-radius: var(--br-3xs);
+  width: 411.2px;
+  height: 411.2px;
+  object-fit: contain;
+}
+
+.icon1 {
+  position: absolute;
+  top: 723px;
+  left: 0px;
+  border-radius: var(--br-3xs);
+  width: 301px;
+  height: 301px;
+  object-fit: contain;
+}
+.child {
+  position: relative;
+  border-top: 1px solid var(--color-sienna);
+  box-sizing: border-box;
+  width: 361px;
+  height: 1px;
+}
+.item {
+  flex: 1;
+  position: relative;
+  border-top: 1px solid var(--color-sienna);
+  box-sizing: border-box;
+  width: 361px;
+}
+.div1 {
+  position: relative;
+  top: 30%;
+  left: 0%;
+  height: 31%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 400px;
+}
+.e-mail {
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-xl);
+  display: inline-block;
+  text-align: left;
+  width: 360px;
+  height: 25px;
+  /* border-top: 10px solid var(--color-sienna); Убираем border-top */
+}
+
+.b {
+  position: absolute;
+  top: 32%;
+  left: 40.50%;
+  font-size: var(--font-size-xl);
+  display: inline-block;
+  text-align: left;
+  width: 360px;
+  height: 25px;
+}
+.b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-sienna); /* Цвет подчеркивания */
+}
+
+.b1 {
+  position: absolute;
+  top: 201px;
+  left: calc(50% - 215px);
+  font-size: var(--font-size-17xl);
+  display: inline-block;
+  color: var(--color-gray);
+  width: 430px;
+  height: 50px;
+}
+.div3 {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 100px);
+  border-radius: var(--br-31xl);
+  background-color: var(--color-sienna);
+  width: 200px;
+  height: 60px;
+}
+.b2 {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 60px;
+}
+.div2 {
+  position: absolute;
+  top: calc(50% - 120px); /* Увеличиваем значение top для поднятия вверх */
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 60px;
+}
+
+.div4 {
+  position: absolute;
+  top: calc(50% - 498px);
+  left: calc(50% - 850px);
+  width: -180%;
+  height: 60px;
+}
+.div6 {
+  position: absolute;
+  top: calc(50% - 412px);
+  left: calc(50% - 850px); /* Уменьшаем значение left для смещения влево */
+  width: -180%;
+  height: 60px;
+}
+
+.div {
+  position: absolute;
+  background-color: var(--color-peachpuff);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--color-rosybrown);
+  font-family: var(--font-inter);
+}
