@@ -31,7 +31,7 @@ input {
 .b18 {
   position: absolute;
   top: 201px;
-  left: calc(50% - 180px);
+  left: calc(50% - 190px);
   font-size: var(--font-size-17xl);
   display: inline-block;
   color: var(--color-gray);
