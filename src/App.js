@@ -55,7 +55,7 @@ function App() {
       <Route path="/" element={<Frame2 />} />
       <Route path="/supplier" element={<Frame1 />} />
       <Route path="/manager" element={<Frame />} />
-      <Route path="/user" element={<Frame3 />} />
+      <Route path="/register" element={<Frame3 />} />
       {/* Добавьте маршрут для Frame2, если необходимо */}
     </Routes>
   );

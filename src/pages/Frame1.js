@@ -23,16 +23,22 @@ const Frame1 = () => {
 ,
       <div className="div2">
         <div className="div3" />
+          <Link to ="/register">
           <button className="b2">Продовжити</button>
+          </Link>
       </div>
 
       <div className="div4">
         <div className="div3" />
+        <Link to ="/client">
         <button className="b2">Клієнт</button>
+        </Link>
       </div>
       <div className="div6">
         <div className="div3" />
-          <button className="b2">Менеджер</button>
+        <Link to ="/manager">
+        <button className="b2">Менеджер</button>
+        </Link>
       </div>
     </div>
   );
