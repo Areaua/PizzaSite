@@ -32,6 +32,7 @@ def register_user():
     if existing_user:
         session.rollback()
     return jsonify({"error": "Пользователь с таким email уже существует."}), 400
+
     new_user = User(
         Fullname=data['Fullname'],
         email=data['Email'],
