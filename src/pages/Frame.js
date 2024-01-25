@@ -19,6 +19,9 @@ const Frame = () => {
       <div className="child" />
 
       <b className="b1">Авторизація</b>
+      <Link to="/register"> {/* Изменил путь только для этой кнопки */}
+        <button className="b3">Немає аккаунта?</button>
+      </Link>
       <div className="div2">
         <div className="div3" />
           <button className="b2">Продовжити</button>
