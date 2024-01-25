@@ -1,5 +1,7 @@
+import React from "react";
 import "./Frame3.css";
-
+import { Link } from "react-router-dom";
+git 
 const Frame3 = () => {
   return (
     <div className="div26">
