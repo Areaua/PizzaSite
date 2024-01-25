@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, redirect, url_for
+from flask import Flask, request, jsonify
 from sqlalchemy import create_engine, Column, String, Integer, Enum
 from sqlalchemy.orm import sessionmaker
 from werkzeug.security import check_password_hash
@@ -28,9 +28,9 @@ session = Session()
 def register_user():
     data = request.json
 
-    # Проверяем, что роль пользователя - Клиент
+    # Перевіряємо, що роль користувача - Клієнт
     if 'Role' not in data or data['Role'] != 'Клиент':
-        return jsonify({"error": "Регистрация разрешена только для клиентов."}), 400
+        return jsonify({"error": "Реєстрація дозволена тільки для клієнтів."}), 400
 
     Name = f"{data['Lastname']} {data['Name']} {data['Patronymic']}"
 
@@ -46,7 +46,7 @@ def register_user():
     session.add(new_user)
     session.commit()
 
-    return jsonify({"message": "Пользователь успешно зарегистрирован."}), 201
+    return jsonify({"message": "Користувач успішно зареєстрований."}), 201
 
 @app.route('/api/login', methods=['POST'])
 def login_user():
@@ -55,9 +55,9 @@ def login_user():
     user = session.query(User).filter_by(email=data['Email']).first()
 
     if user and check_password_hash(user.Password, data['Пароль']):
-        return jsonify({"message": "Авторизация успешна.", "token": "ваш_токен_jwt"}), 200
+        return jsonify({"message": "Авторизація успішна.", "token": "ваш_токен_jwt"}), 200
     else:
-        return jsonify({"error": "Неправильный email или пароль."}), 401
+        return jsonify({"error": "Неправильний email або пароль."}), 401
 
 if __name__ == '__main__':
     app.run(debug=True)
