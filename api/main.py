@@ -28,6 +28,11 @@ session = Session()
 def register_user():
     data = request.json
 
+    existing_user = session.query(User).filter_by(email=data['Email']).first()
+    if existing_user:
+        session.rollback()
+    return jsonify({"error": "Пользователь с таким email уже существует."}), 400
+
     new_user = User(
         Fullname=data['Fullname'],
         email=data['Email'],
