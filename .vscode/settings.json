@@ -1,0 +1,14 @@
+{
+  "locofyConfig": {
+    "project_name": "Pizza",
+    "id": "65b0026fc7c5ff1754319d44",
+    "framework": "react",
+    "typescript": false,
+    "path": "public/",
+    "componentsPath": "d:\\Pasha\\Паша\\HTML\\gg\\src\\components",
+    "screensPath": "d:\\Pasha\\Паша\\HTML\\gg\\src\\pages",
+    "styling": "CSS",
+    "unit": "px",
+    "naming": "Pascal Case"
+  }
+}
