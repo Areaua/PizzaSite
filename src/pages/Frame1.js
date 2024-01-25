@@ -30,7 +30,7 @@ const Frame1 = () => {
 
       <div className="div4">
         <div className="div3" />
-        <Link to ="/client">
+        <Link to ="/">
         <button className="b2">Клієнт</button>
         </Link>
       </div>
