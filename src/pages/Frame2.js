@@ -62,10 +62,9 @@ const Frame2 = () => {
       <div className="child" />
 
       <b className="b1">Авторизація</b>
-      <button className="b3" onClick={handleLogin}>
-        Немає аккаунта?
-      </button>
-
+      <Link to="/register">
+      <button className="b3">Немає аккаунта?</button>
+      </Link>
       <div className="div2">
         <div className="div3" />
         <button className="b2" onClick={handleLogin}>
