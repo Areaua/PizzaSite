@@ -60,4 +60,4 @@ def login_user():
         return jsonify({"error": "Неправильний email або пароль."}), 401
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=3000)
