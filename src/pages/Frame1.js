@@ -20,7 +20,6 @@ const Frame1 = () => {
  
       <b className="b1">Авторизація</b>
       <button className="b3">Немає аккаунта?</button>
-,
       <div className="div2">
         <div className="div3" />
           <button className="b2">Продовжити</button>
