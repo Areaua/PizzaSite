@@ -11,7 +11,6 @@ const Frame3 = () => {
     Password: "",
     PhoneNumber: "",
     Address: "",
-    Role: "Клиент", // Assuming the default role is "Клиент"
   });
 
   const history = useNavigate();
