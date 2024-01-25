@@ -33,12 +33,12 @@ def register_user():
         return jsonify({"error": "Регистрация разрешена только для клиентов."}), 400
 
     new_user = User(
-        Fullname=data['ФИО'],
+        Fullname=data['Fullname'],
         email=data['Email'],
-        Password=data['Пароль'],
-        PhoneNumber=data['НомерТелефона'],
-        Address=data['АдресПроживания'],
-        Role=data['Роль']
+        Password=data['Password'],
+        PhoneNumber=data['PhoneNumber'],
+        Address=data['Address'],
+        Role=data['Role']
     )
 
     session.add(new_user)
