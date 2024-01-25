@@ -15,7 +15,7 @@ const root = createRoot(container);
 root.render(
   <BrowserRouter>
     <Routes>  {/* Изменил открытие маршрутов */}
-      <Route path="/" element={<Frame2 />} />
+      <Route path="/client" element={<Frame2 />} />
       <Route path="/supplier" element={<Frame1 />} />
       <Route path="/manager" element={<Frame />} />
       <Route path="/register" element={<Frame3 />} />

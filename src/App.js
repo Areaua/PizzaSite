@@ -52,7 +52,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Frame2 />} />
+      <Route path="/client" element={<Frame2 />} />
       <Route path="/supplier" element={<Frame1 />} />
       <Route path="/manager" element={<Frame />} />
       <Route path="/register" element={<Frame3 />} />
