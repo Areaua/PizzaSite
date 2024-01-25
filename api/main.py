@@ -17,7 +17,7 @@ class User(Base):
     Password = Column(String, nullable=False)
     PhoneNumber = Column(String, nullable=False)
     Address = Column(String, nullable=False)
-    Role = Column(Enum('Клиент', 'Менеджер', 'Поставщик', name='role_enum'), nullable=False)
+
 
 engine = create_engine('sqlite:///mydatabase.db', echo=True)
 Base.metadata.create_all(engine)
@@ -28,21 +28,17 @@ session = Session()
 def register_user():
     data = request.json
 
-    # Проверяем, что роль пользователя - Клиент
-    if 'Role' not in data or data['Role'] != 'Клиент':
-        return jsonify({"error": "Регистрация разрешена только для клиентов."}), 400
-
     existing_user = session.query(User).filter_by(email=data['Email']).first()
     if existing_user:
         session.rollback()
     return jsonify({"error": "Пользователь с таким email уже существует."}), 400
+
     new_user = User(
         Fullname=data['Fullname'],
         email=data['Email'],
         Password=data['Password'],
         PhoneNumber=data['PhoneNumber'],
         Address=data['Address'],
-        Role=data['Role']
     )
 
     session.add(new_user)
