@@ -118,14 +118,15 @@ input {
 .b3 {
   position: absolute;
   top: calc(50% - 50px);
-  left: calc(50% - 50px);
+  left: 50%; /* Используйте 50% для центрирования по горизонтали */
+  transform: translateX(-50%); /* Центрируйте кнопку относительно ее собственной ширины */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 200px;
   height: 30px;
   background-color: #FFE4DB;
-  color: #C89E90; /* Цвет текста кнопки */
+  color: #C89E90;
   border: #FFE4DB;
   border-radius: 30px;
   padding: 10px 20px;

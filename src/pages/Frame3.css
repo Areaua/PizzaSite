@@ -30,7 +30,7 @@ input {
 }
 .b18 {
   position: absolute;
-  top: 201px;
+  top: calc(50% - 300px);
   left: calc(50% - 190px);
   font-size: var(--font-size-17xl);
   display: inline-block;
@@ -73,15 +73,15 @@ input {
 }
 .div30 {
   position: absolute;
-  top: calc(50% - 30px);
+  top: calc(50% + 10px);
   left: calc(50% + 30px);
   width: 200px;
   height: 60px;
 }
 .b21 {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: calc(50% + 10px);
+  left: calc(50% - 200px);
   font-size: var(--font-size-xl);
   display: flex;
   color: var(--color-black);
@@ -181,10 +181,10 @@ input {
   font-size: var(--font-size-xl);
 }
 .div26 {
-  position: relative; /* Используйте relative для позиционирования контейнера */
+  position: relative;
   background-color: #FFE4DB;
   width: 100%;
-  height: 1024px;
+  height: 100vh; /* Изменено на относительное значение vh */
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-base);

@@ -35,7 +35,9 @@ const Frame2 = () => {
       </div>
       <div className="div6">
         <div className="div3" />
+        <Link to="/manager">
         <button className="b2">Менеджер</button>
+        </Link>
       </div>
     </div>
   );

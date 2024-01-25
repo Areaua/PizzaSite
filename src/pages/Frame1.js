@@ -18,12 +18,12 @@ const Frame1 = () => {
       <div className="child" />
  
       <b className="b1">Авторизація</b>
-      <button className="b3">Немає аккаунта?</button>
+      <Link to ="/register">
+       <button className="b3">Немає аккаунта?</button>
+      </Link>
       <div className="div2">
         <div className="div3" />
-          <Link to ="/register">
           <button className="b2">Продовжити</button>
-          </Link>
       </div>
 
       <div className="div4">
