@@ -32,15 +32,17 @@ def register_user():
     if 'Role' not in data or data['Role'] != 'Клиент':
         return jsonify({"error": "Регистрация разрешена только для клиентов."}), 400
 
-    Fullname = f"{data['Lastname']} {data['Name']} {data['Patronymic']}"
-
+    existing_user = session.query(User).filter_by(email=data['Email']).first()
+    if existing_user:
+        session.rollback()
+    return jsonify({"error": "Пользователь с таким email уже существует."}), 400
     new_user = User(
-        Fullname=Fullname,
+        Fullname=data['Fullname'],
         email=data['Email'],
-        Password=data['Пароль'],
-        PhoneNumber=data['НомерТелефона'],
-        Address=data['АдресПроживания'],
-        Role=data['Роль']
+        Password=data['Password'],
+        PhoneNumber=data['PhoneNumber'],
+        Address=data['Address'],
+        Role=data['Role']
     )
 
     session.add(new_user)
@@ -60,4 +62,4 @@ def login_user():
         return jsonify({"error": "Неправильный email или пароль."}), 401
 
 if __name__ == '__main__':
-    app.run(debug=True,port=3000 )
+    app.run(debug=True, port=3000)
