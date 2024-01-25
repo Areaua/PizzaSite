@@ -66,7 +66,7 @@ const Frame3 = () => {
           <div className="child3" />
           <div className="child3" />
         </div>
-        <input type="text" name="Name" className="b25" placeholder="Ваш ПІБ" value={registrationData.Name} onChange={handleInputChange} />
+        <input type="text" name="Fullname" className="b25" placeholder="Ваш ПІБ" value={registrationData.Fullname} onChange={handleInputChange} />
         <input type="text" name="Email" className="e-mail3" placeholder="E-mail" value={registrationData.Email} onChange={handleInputChange}  />
         <input type="password" name="Password" className="b22"  placeholder="Password"  value={registrationData.Password}  onChange={handleInputChange}  />
         <input  type="text"   name="PhoneNumber"  className="b23"  placeholder="Phone Number"  value={registrationData.PhoneNumber}   onChange={handleInputChange} />

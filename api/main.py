@@ -12,7 +12,7 @@ class User(Base):
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True)
-    Name = Column(String, nullable=False)
+    Fullname = Column(String, nullable=False)
     email = Column(String, unique=True, nullable=False)
     Password = Column(String, nullable=False)
     PhoneNumber = Column(String, nullable=False)
@@ -32,10 +32,10 @@ def register_user():
     if 'Role' not in data or data['Role'] != 'Клиент':
         return jsonify({"error": "Регистрация разрешена только для клиентов."}), 400
 
-    Name = f"{data['Lastname']} {data['Name']} {data['Patronymic']}"
+    Fullname = f"{data['Lastname']} {data['Name']} {data['Patronymic']}"
 
     new_user = User(
-        Name=Name,
+        Fullname=Fullname,
         email=data['Email'],
         Password=data['Пароль'],
         PhoneNumber=data['НомерТелефона'],
@@ -60,4 +60,4 @@ def login_user():
         return jsonify({"error": "Неправильный email или пароль."}), 401
 
 if __name__ == '__main__':
-    app.run(debug=True, port=3000)
+    app.run(debug=True)
