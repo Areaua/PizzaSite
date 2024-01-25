@@ -1,15 +1,27 @@
-.icon6 {
-  position: absolute;
-  top: 667.9px;
-  left: 1083.9px;
+input {
+  border: none;
+  outline: none;
+  background: transparent; /* Делает фон прозрачным */
+  position: relative; /* Необходимо для позиционирования псевдоэлемента */
+}
+.icon0 {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  position: relative;
+  top: 600px;
+  left: 43%;
   border-radius: var(--br-3xs);
   width: 411.2px;
   height: 411.2px;
   object-fit: contain;
 }
-.icon7 {
+.icon1 {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
   position: absolute;
-  top: 723px;
+  top: 678px;
   left: 0px;
   border-radius: var(--br-3xs);
   width: 301px;

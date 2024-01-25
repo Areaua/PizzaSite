@@ -23,12 +23,20 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "Главная страница";
-        metaDescription = "Это главная страница";
+        title = "Страница авторизации";
+        metaDescription = "Это страница авторизации";
         break;
       case "/supplier":
         title = "Страница поставщика";
         metaDescription = "Это страница поставщика";
+        break;
+      case "/manager":
+        title = "Страница менеджера";
+        metaDescription = "Это страница менеджера";
+        break;
+      case "/register":
+        title = "Страница регистрации";
+        metaDescription = "Это страница регистрации";
         break;
       default:
         title = "Заголовок по умолчанию";
@@ -52,7 +60,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/client" element={<Frame2 />} />
+      <Route path="/" element={<Frame2 />} />
       <Route path="/supplier" element={<Frame1 />} />
       <Route path="/manager" element={<Frame />} />
       <Route path="/register" element={<Frame3 />} />

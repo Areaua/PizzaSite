@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const Frame3 = () => {
   return (
     <div className="div26">
-      <img className="icon6" alt="" src="/@2x.png" />
-      <img className="icon7" alt="" src="/2@2x.png" />
+      <img className="icon0" alt="" src="/@2x.png" />
+      <img className="icon1" alt="" src="/2@2x.png" />
       <b className="b18">Реєстрація</b>
       <div className="div27">
         <div className="div28" />
