@@ -32,10 +32,8 @@ def register_user():
     if 'Role' not in data or data['Role'] != 'Клиент':
         return jsonify({"error": "Регистрация разрешена только для клиентов."}), 400
 
-    Fullname = f"{data['Lastname']} {data['Name']} {data['Patronymic']}"
-
     new_user = User(
-        Fullname=Fullname,
+        Fullname=data['ФИО'],
         email=data['Email'],
         Password=data['Пароль'],
         PhoneNumber=data['НомерТелефона'],
