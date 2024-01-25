@@ -1,15 +1,39 @@
 // App.js
-import React, { useEffect } from "react";
-import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Routes, Route, useNavigationType, useLocation, useNavigate } from "react-router-dom";
 import Frame from "./pages/Frame";
 import Frame1 from "./pages/Frame1";
 import Frame2 from "./pages/Frame2";
 import Frame3 from "./pages/Frame3";
+import axios from 'axios';
 
 function App() {
   const action = useNavigationType();
   const location = useLocation();
   const pathname = location.pathname;
+  const navigate = useNavigate();  // Use useNavigate instead of useHistory
+
+
+  const MyComponent = () => {
+    const [data, setData] = useState('');
+
+    useEffect(() => {
+      // Выполнение HTTP-запроса к серверу Python
+      axios.get('/main.py')
+        .then(response => {
+          setData(response.data.message);
+        })
+        .catch(error => {
+          console.error('Ошибка запроса:', error);
+        });
+    }, []);
+  
+    return (
+      <div>
+        <p>Данные от сервера: {data}</p>
+      </div>
+    );
+  };
 
   useEffect(() => {
     if (action !== "POP") {
