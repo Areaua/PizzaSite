@@ -10,12 +10,16 @@ const Frame3 = () => {
       <b className="b18">Реєстрація</b>
       <div className="div27">
         <div className="div28" />
+        <Link to="/">
         <button className="b19">Продовжити</button>
+        </Link>
       </div>
       <div className="div29">
         <div className="div30">
           <div className="div28" />
-          <b className="b19">Авторизація</b>
+          <Link to="/">
+          <button className="b19">Авторизація</button>
+          </Link>
         </div>
         <b className="b21">Вже є аккаунт?</b>
       </div>

@@ -19,7 +19,7 @@ const Frame2 = () => {
       <div className="child" />
 
       <b className="b1">Авторизація</b>
-      <Link to="/frame3"> {/* Изменил путь только для этой кнопки */}
+      <Link to="/register"> {/* Изменил путь только для этой кнопки */}
         <button className="b3">Немає аккаунта?</button>
       </Link>
 
