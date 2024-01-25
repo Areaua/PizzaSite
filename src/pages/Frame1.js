@@ -13,14 +13,12 @@ const Frame1 = () => {
       <input type="password" className="b" placeholder="Пароль" />
 
       <div className="div1">
-        {/* Добавьте ваш код для div1 */}
       </div>
       <div className="item" />
       <div className="child" />
  
       <b className="b1">Авторизація</b>
       <button className="b3">Немає аккаунта?</button>
-,
       <div className="div2">
         <div className="div3" />
           <Link to ="/register">
