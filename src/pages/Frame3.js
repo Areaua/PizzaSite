@@ -1,4 +1,6 @@
+import React from "react";
 import "./Frame3.css";
+import { Link } from "react-router-dom";
 
 const Frame3 = () => {
   return (

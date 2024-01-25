@@ -1,28 +1,37 @@
+// Frame.js
+import React from "react";
 import "./Frame.css";
+import { Link } from "react-router-dom";
 
 const Frame = () => {
   return (
     <div className="div">
       <img className="icon" alt="" src="/@2x.png" />
       <img className="icon1" alt="" src="/1@2x.png" />
+
+      <input type="text" className="e-mail" placeholder="E-mail" />
+      <input type="password" className="b" placeholder="Пароль" />
+
       <div className="div1">
-        <div className="child" />
-        <div className="item" />
+        {/* Добавьте ваш код для div1 */}
       </div>
-      <b className="e-mail">E-mail</b>
-      <b className="b">Пароль</b>
+      <div className="item" />
+      <div className="child" />
+
       <b className="b1">Авторизація</b>
       <div className="div2">
         <div className="div3" />
-        <b className="b2">Продовжити</b>
+          <button className="b2">Продовжити</button>
       </div>
       <div className="div4">
         <div className="div3" />
-        <b className="b2">Постачальник</b>
+        <Link to="/supplier">
+        <button className="b2">Постачальник</button>
+        </Link>
       </div>
       <div className="div6">
         <div className="div3" />
-        <b className="b2">Клієнт</b>
+          <button className="b2">Клієнт</button>
       </div>
     </div>
   );
