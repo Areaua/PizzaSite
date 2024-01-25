@@ -10,7 +10,7 @@ const Frame3 = () => {
       <b className="b18">Реєстрація</b>
       <div className="div27">
         <div className="div28" />
-        <b className="b19">Продовжити</b>
+        <button className="b19">Продовжити</button>
       </div>
       <div className="div29">
         <div className="div30">
@@ -27,11 +27,11 @@ const Frame3 = () => {
           <div className="child3" />
           <div className="child3" />
         </div>
-        <b className="e-mail3">E-mail</b>
-        <b className="b22">Пароль</b>
-        <b className="b23">Номер телефона</b>
-        <b className="b24">Адреса</b>
-        <b className="b25">Ваш ПІБ</b>
+        <input type="text" className="e-mail3" placeholder="E-mail" />
+        <input type="password" className="b22" placeholder="Пароль" />
+        <input type="text" className="b23" placeholder="Номер телефона" />
+        <input type="text" className="b24" placeholder="Адреса" />
+        <input type="text" className="b25" placeholder="Ваш ПІБ" />
       </div>
     </div>
   );
