@@ -1,5 +1,4 @@
-
-// Frame.js
+// Frame2.js
 import React from "react";
 import "./Frame2.css";
 import { Link } from "react-router-dom";
@@ -20,19 +19,23 @@ const Frame2 = () => {
       <div className="child" />
 
       <b className="b1">Авторизація</b>
+      <Link to="/frame3"> {/* Изменил путь только для этой кнопки */}
+        <button className="b3">Немає аккаунта?</button>
+      </Link>
+
       <div className="div2">
         <div className="div3" />
-          <button className="b2">Продовжити</button>
+        <button className="b2">Продовжити</button>
       </div>
       <div className="div4">
         <div className="div3" />
         <Link to="/supplier">
-        <button className="b2">Постачальник</button>
+          <button className="b2">Постачальник</button>
         </Link>
       </div>
       <div className="div6">
         <div className="div3" />
-          <button className="b2">Менеджер</button>
+        <button className="b2">Менеджер</button>
       </div>
     </div>
   );

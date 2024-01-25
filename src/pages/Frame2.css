@@ -1,19 +1,23 @@
+/* Frame2.css */
+
+/* Стили для input */
 input {
   border: none;
   outline: none;
-  background: transparent; /* Делает фон прозрачным */
-  position: relative; /* Необходимо для позиционирования псевдоэлемента */
+  background: transparent;
+  position: relative;
 }
+
 .icon {
   user-select: none;
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
   position: relative;
-  top: 600px;
+  top: 630px;
   left: 43%;
   border-radius: var(--br-3xs);
-  width: 411.2px;
-  height: 411.2px;
+  width: 350px;
+  height: 350px;
   object-fit: contain;
 }
 
@@ -29,28 +33,31 @@ input {
   height: 301px;
   object-fit: contain;
 }
+
 .child {
   position: absolute;
-  top: 310px; /* На сколько пикселей приподнять .child относительно input */
-  left: 50%; /* Разместить .child по горизонтали по центру input */
-  transform: translateX(-50%); /* Центрировать .child относительно input */
+  top: 310px;
+  left: 50%;
+  transform: translateX(-50%);
   border-top: 1px solid;
   box-sizing: border-box;
   width: 361px;
   height: 1px;
-  color: #733D3D; /* Цвет текста кнопки */
+  color: #733D3D;
 }
+
 .item {
   position: absolute;
-  top: 350px; /* На сколько пикселей приподнять .child относительно input */
-  left: 50%; /* Разместить .child по горизонтали по центру input */
-  transform: translateX(-50%); /* Центрировать .child относительно input */
+  top: 350px;
+  left: 50%;
+  transform: translateX(-50%);
   border-top: 1px solid;
   box-sizing: border-box;
   width: 361px;
   height: 1px;
-  color: #733D3D; /* Цвет текста кнопки */
+  color: #733D3D;
 }
+
 .div1 {
   position: relative;
   top: 30%;
@@ -62,6 +69,7 @@ input {
   justify-content: space-between;
   max-height: 400px;
 }
+
 .e-mail {
   position: absolute;
   top: 29%;
@@ -72,8 +80,8 @@ input {
   text-align: left;
   width: 360px;
   height: 25px;
-
 }
+
 .e-mail::after {
   content: '';
   position: absolute;
@@ -81,7 +89,9 @@ input {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #000;}
+  background-color: #000;
+}
+
 .b {
   position: absolute;
   top: 33%;
@@ -93,7 +103,7 @@ input {
   width: 360px;
   height: 25px;
 }
-  
+
 .b::after {
   content: '';
   position: absolute;
@@ -114,6 +124,28 @@ input {
   width: 430px;
   height: 50px;
 }
+
+/* Frame2.css */
+
+.b3 {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: 50%; /* Используйте 50% для центрирования по горизонтали */
+  transform: translateX(-50%); /* Центрируйте кнопку относительно ее собственной ширины */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 30px;
+  background-color: #FFE4DB;
+  color: #C89E90;
+  border: #FFE4DB;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
 .div3 {
   position: absolute;
   top: calc(50% - 30px);
@@ -123,6 +155,7 @@ input {
   width: 200px;
   height: 60px;
 }
+
 .b2 {
   position: absolute;
   top: calc(50% - 30px);
@@ -133,12 +166,13 @@ input {
   width: 200px;
   height: 60px;
   background-color: #733D3D;
-  color: #C89E90; /* Цвет текста кнопки */
+  color: #C89E90;
   border: none;
   border-radius: 50px;
   padding: 10px 20px;
   cursor: pointer;
 }
+
 .div2 {
   position: absolute;
   top: calc(50% - 120px);
@@ -149,15 +183,16 @@ input {
 
 .div4 {
   position: absolute;
-  top: 10px; /* Отступ сверху */
-  left: 20px; /* Отступ слева */
+  top: 10px;
+  left: 20px;
   width: 180px;
   height: 60px;
 }
+
 .div6 {
   position: absolute;
-  top: 100px; /* Отступ сверху */
-  left: 20px; /* Отступ слева */
+  top: 100px;
+  left: 20px;
   width: 180px;
   height: 60px;
 }
