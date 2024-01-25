@@ -1,32 +1,38 @@
 import "./Frame1.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Frame1 = () => {
+
   return (
-    <div className="div8">
-      <img className="icon2" alt="" src="/@2x.png" />
-      <img className="icon3" alt="" src="/1@2x.png" />
-      <div className="div9">
-        <div className="inner" />
-        <div className="line-div" />
+    <div className="div">
+      <img className="icon" alt="" src="/@2x.png" />
+      <img className="icon1" alt="" src="/1@2x.png" />
+
+      <input type="text" className="e-mail" placeholder="E-mail" />
+      <input type="password" className="b" placeholder="Пароль" />
+
+      <div className="div1">
+        {/* Добавьте ваш код для div1 */}
       </div>
-      <b className="e-mail1">E-mail</b>
-      <b className="b5">Пароль</b>
-      <div className="div10">
-        <div className="div11" />
-        <b className="b6">Зв'язок із менеджером</b>
+      <div className="item" />
+      <div className="child" />
+ 
+      <b className="b1">Авторизація</b>
+      <button className="b3">Немає аккаунта?</button>
+,
+      <div className="div2">
+        <div className="div3" />
+          <button className="b2">Продовжити</button>
       </div>
-      <b className="b7">Авторизація</b>
-      <div className="div12">
-        <div className="div11" />
-        <b className="b6">Продовжити</b>
+
+      <div className="div4">
+        <div className="div3" />
+        <button className="b2">Клієнт</button>
       </div>
-      <div className="div14">
-        <div className="div11" />
-        <b className="b6">Клієнт</b>
-      </div>
-      <div className="div16">
-        <div className="div11" />
-        <b className="b6">Менеджер</b>
+      <div className="div6">
+        <div className="div3" />
+          <button className="b2">Менеджер</button>
       </div>
     </div>
   );

@@ -1,93 +1,110 @@
-.icon2 {
-  position: absolute;
-  top: 667.9px;
-  left: 1083.9px;
+input {
+  border: none;
+  outline: none;
+  background: transparent; /* Делает фон прозрачным */
+  position: relative; /* Необходимо для позиционирования псевдоэлемента */
+}
+.icon {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  position: relative;
+  top: 600px;
+  left: 43%;
   border-radius: var(--br-3xs);
-  width: 411.2px;
-  height: 411.2px;
+  width: 350px;
+  height: 350px;
   object-fit: contain;
 }
-.icon3 {
+
+.icon1 {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
   position: absolute;
-  top: 723px;
+  top: 678px;
   left: 0px;
   border-radius: var(--br-3xs);
   width: 301px;
   height: 301px;
   object-fit: contain;
 }
-.inner {
-  position: relative;
-  border-top: 1px solid var(--color-sienna);
+.child {
+  position: absolute;
+  top: 310px; /* На сколько пикселей приподнять .child относительно input */
+  left: 50%; /* Разместить .child по горизонтали по центру input */
+  transform: translateX(-50%); /* Центрировать .child относительно input */
+  border-top: 1px solid;
   box-sizing: border-box;
   width: 361px;
   height: 1px;
+  color: #733D3D; /* Цвет текста кнопки */
 }
-.line-div {
-  flex: 1;
-  position: relative;
-  border-top: 1px solid var(--color-sienna);
+.item {
+  position: absolute;
+  top: 350px; /* На сколько пикселей приподнять .child относительно input */
+  left: 50%; /* Разместить .child по горизонтали по центру input */
+  transform: translateX(-50%); /* Центрировать .child относительно input */
+  border-top: 1px solid;
   box-sizing: border-box;
   width: 361px;
+  height: 1px;
+  color: #733D3D; /* Цвет текста кнопки */
 }
-.div9 {
-  position: absolute;
-  top: 320px;
-  left: 540px;
-  height: 200px;
+.div1 {
+  position: relative;
+  top: 30%;
+  left: 0%;
+  height: 31%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   max-height: 400px;
 }
-.e-mail1 {
+.e-mail {
   position: absolute;
-  top: 295px;
-  left: 540px;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-xl);
+  display: inline-block;
+  text-align: left;
+  width: 360px;
+  height: 25px;
+
+}
+.e-mail::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;}
+.b {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: var(--font-size-xl);
   display: inline-block;
   text-align: left;
   width: 360px;
   height: 25px;
 }
-.b5 {
+  
+.b::after {
+  content: '';
   position: absolute;
-  top: 395px;
-  left: 540px;
-  font-size: var(--font-size-xl);
-  display: inline-block;
-  text-align: left;
-  width: 360px;
-  height: 25px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
 }
-.div11 {
-  position: absolute;
-  top: calc(50% - 30px);
-  left: calc(50% - 100px);
-  border-radius: var(--br-31xl);
-  background-color: var(--color-sienna);
-  width: 200px;
-  height: 60px;
-}
-.b6 {
-  position: absolute;
-  top: calc(50% - 30px);
-  left: calc(50% - 100px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 60px;
-}
-.div10 {
-  position: absolute;
-  top: calc(50% - 498px);
-  left: calc(50% + 507px);
-  width: 200px;
-  height: 60px;
-}
-.b7 {
+
+.b1 {
   position: absolute;
   top: 201px;
   left: calc(50% - 215px);
@@ -97,30 +114,75 @@
   width: 430px;
   height: 50px;
 }
-.div12 {
+
+.b3 {
   position: absolute;
-  top: calc(50% - 60px);
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  background-color: #FFE4DB;
+  color: #C89E90; /* Цвет текста кнопки */
+  border: #FFE4DB;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.div3 {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 100px);
+  border-radius: var(--br-31xl);
+  background-color: var(--color-sienna);
+  width: 200px;
+  height: 60px;
+}
+.b2 {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 60px;
+  background-color: #733D3D;
+  color: #C89E90; /* Цвет текста кнопки */
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.div2 {
+  position: absolute;
+  top: calc(50% - 120px);
   left: calc(50% - 100px);
   width: 200px;
   height: 60px;
 }
-.div14 {
+
+.div4 {
   position: absolute;
-  top: calc(50% - 498px);
-  left: calc(50% - 700px);
-  width: 200px;
+  top: 10px; /* Отступ сверху */
+  left: 20px; /* Отступ слева */
+  width: 180px;
   height: 60px;
 }
-.div16 {
+.div6 {
   position: absolute;
-  top: calc(50% - 412px);
-  left: calc(50% - 700px);
-  width: 200px;
+  top: 100px; /* Отступ сверху */
+  left: 20px; /* Отступ слева */
+  width: 180px;
   height: 60px;
 }
-.div8 {
+
+.div {
   position: relative;
-  background-color: var(--color-peachpuff);
+  background-color: #FFE4DB;
   width: 100%;
   height: 1024px;
   overflow: hidden;
