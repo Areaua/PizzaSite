@@ -128,7 +128,7 @@ input {
 }
 .b22 {
   position: absolute;
-  top: 27%;
+  top: 19%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: var(--font-size-xl);
@@ -139,7 +139,7 @@ input {
 }
 .b23 {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: var(--font-size-xl);
@@ -150,7 +150,7 @@ input {
 }
 .b24 {
   position: absolute;
-  top: 73%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: var(--font-size-xl);
@@ -161,6 +161,28 @@ input {
 }
 .b25 {
   position: absolute;
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-xl);
+  display: inline-block;
+  text-align: left;
+  width: 360px;
+  height: 25px;
+}
+.b26 {
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-xl);
+  display: inline-block;
+  text-align: left;
+  width: 360px;
+  height: 25px;
+}
+.b27 {
+  position: absolute;
   top: 97%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -170,6 +192,7 @@ input {
   width: 360px;
   height: 25px;
 }
+
 .body {
   position: absolute;
   top: calc(50% - 200px);
