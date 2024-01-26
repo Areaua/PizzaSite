@@ -12,7 +12,9 @@ class User(Base):
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True)
-    Fullname = Column(String, nullable=False)
+    FirstName = Column(String, nullable=False)
+    LastName = Column(String, nullable=False)
+    Batya = Column(String, nullable=False)
     email = Column(String, unique=True, nullable=False)
     Password = Column(String, nullable=False)
     PhoneNumber = Column(String, nullable=False)
@@ -34,7 +36,9 @@ def register_user():
         return jsonify({"error": "Пользователь с таким email уже существует."}), 400
 
     new_user = User(
-        Fullname=data['Fullname'],
+        FirstName=data['FirstName'],
+        LastName=data['LastName'],
+        Batya=data['Batya'],
         email=data['Email'],
         Password=data['Password'],
         PhoneNumber=data['PhoneNumber'],

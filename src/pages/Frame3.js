@@ -62,15 +62,39 @@ const Frame3 = () => {
           <div className="child3" />
           <div className="child3" />
           <div className="child3" />
+          <div className="child3" />
+          <div className="child3" />
         </div>
+
+
+
+
         <input
           type="text"
-          name="Name"
+          name="FirstName"
           className="b25"
-          placeholder="Ваш ПІБ"
-          value={registrationData.Fullname}
+          placeholder="Призвище"
+          value={registrationData.FirstName}
           onChange={handleInputChange}
         />
+
+        <input
+          type="text"
+          name="LastName"
+          className="b26"
+          placeholder="Ім'я"
+          value={registrationData.LastName}
+          onChange={handleInputChange}
+        />      
+        <input
+          type="text"
+          name="Batya"
+          className="b27"
+          placeholder="По батькові"
+          value={registrationData.Batya}
+          onChange={handleInputChange}
+        />    
+
         <input
           type="text"
           name="Email"
