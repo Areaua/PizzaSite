@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from sqlalchemy import create_engine, Column, String, Integer
+from sqlalchemy import create_engine, Column, String, Integer, Enum
 from sqlalchemy.orm import sessionmaker
 from werkzeug.security import check_password_hash
 import sqlalchemy
@@ -12,13 +12,12 @@ class User(Base):
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True)
-    lastname = Column(String, nullable=False)
-    name = Column(String, nullable=False)
-    patronymic = Column(String, nullable=False)
+    Fullname = Column(String, nullable=False)
     email = Column(String, unique=True, nullable=False)
-    password = Column(String, nullable=False)
-    phone_number = Column(String, nullable=False)
-    address = Column(String, nullable=False)
+    Password = Column(String, nullable=False)
+    PhoneNumber = Column(String, nullable=False)
+    Address = Column(String, nullable=False)
+
 
 engine = create_engine('sqlite:///mydatabase.db', echo=True)
 Base.metadata.create_all(engine)
@@ -29,23 +28,19 @@ session = Session()
 def register_user():
     data = request.json
 
-    # Перевірка, чи існує поле Fullname у вхідних даних
-    if 'Fullname' not in data:
-        return jsonify({"error": "Поле Fullname відсутнє у вхідних даних."}), 400
-
     existing_user = session.query(User).filter_by(email=data['Email']).first()
     if existing_user:
         session.rollback()
         return jsonify({"error": "Користувач з такою електронною поштою вже існує."}), 400
 
+    full_name = data.get('Fullname', '')  # Отримуємо ПІБ з даних або залишаємо порожнім рядком
+
     new_user = User(
-        lastname=data['LastName'],
-        name=data['Name'],
-        patronymic=data['Patronymic'],
+        Fullname=full_name,
         email=data['Email'],
-        password=data['Password'],
-        phone_number=data['PhoneNumber'],
-        address=data['Address'],
+        Password=data['Password'],
+        PhoneNumber=data['PhoneNumber'],
+        Address=data['Address'],
     )
 
     session.add(new_user)
@@ -54,17 +49,16 @@ def register_user():
     return jsonify({"message": "Користувач успішно зареєстрований."})
 
 
-
 @app.route('/api/login', methods=['POST'])
 def login_user():
     data = request.json
 
     user = session.query(User).filter_by(email=data['Email']).first()
 
-    if user and check_password_hash(user.password, data['Password']):
+    if user and check_password_hash(user.Password, data['Password']):
         return jsonify({"message": "Авторизация успешна.", "token": "ваш_токен_jwt"}), 200
     else:
         return jsonify({"error": "Неправильный email или пароль."}), 401
 
-if __name__ == 'main':
+if __name__ == '__main__':
     app.run(debug=True, port=3000)
