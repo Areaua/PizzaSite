@@ -4,7 +4,7 @@ input {
   background: transparent; /* Делает фон прозрачным */
   position: relative; /* Необходимо для позиционирования псевдоэлемента */
 }
-.icon0 {
+.icon {
   user-select: none;
   -webkit-user-drag: none;
   -webkit-touch-callout: none;

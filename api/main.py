@@ -31,7 +31,7 @@ def register_user():
     existing_user = session.query(User).filter_by(email=data['Email']).first()
     if existing_user:
         session.rollback()
-    return jsonify({"error": "Пользователь с таким email уже существует."}), 400
+        return jsonify({"error": "Пользователь с таким email уже существует."}), 400
 
     new_user = User(
         Fullname=data['Fullname'],
@@ -52,7 +52,7 @@ def login_user():
 
     user = session.query(User).filter_by(email=data['Email']).first()
 
-    if user and check_password_hash(user.Password, data['Пароль']):
+    if user and check_password_hash(user.Password, data['Password']):
         return jsonify({"message": "Авторизация успешна.", "token": "ваш_токен_jwt"}), 200
     else:
         return jsonify({"error": "Неправильный email или пароль."}), 401
