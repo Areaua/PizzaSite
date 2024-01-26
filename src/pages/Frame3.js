@@ -37,7 +37,7 @@ const Frame3 = () => {
 
   return (
     <div className="div26">
-      <img className="icon0" alt="" src="/@2x.png" />
+      <img className="icon" alt="" src="/@2x.png" />
       <img className="icon1" alt="" src="/2@2x.png" />
       <b className="b18">Реєстрація</b>
       <div className="div27">
@@ -68,7 +68,7 @@ const Frame3 = () => {
           name="Name"
           className="b25"
           placeholder="Ваш ПІБ"
-          value={registrationData.Name}
+          value={registrationData.Fullname}
           onChange={handleInputChange}
         />
         <input
@@ -76,7 +76,7 @@ const Frame3 = () => {
           name="Email"
           className="e-mail3"
           placeholder="E-mail"
-          value={registrationData.Email}
+          value={registrationData.email}
           onChange={handleInputChange}
         />
         <input
