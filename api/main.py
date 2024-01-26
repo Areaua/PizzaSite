@@ -29,6 +29,10 @@ session = Session()
 def register_user():
     data = request.json
 
+    # Перевірка, чи існує поле Fullname у вхідних даних
+    if 'Fullname' not in data:
+        return jsonify({"error": "Поле Fullname відсутнє у вхідних даних."}), 400
+
     existing_user = session.query(User).filter_by(email=data['Email']).first()
     if existing_user:
         session.rollback()
@@ -48,6 +52,7 @@ def register_user():
     session.commit()
 
     return jsonify({"message": "Користувач успішно зареєстрований."})
+
 
 
 @app.route('/api/login', methods=['POST'])
