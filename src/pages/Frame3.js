@@ -85,7 +85,7 @@ const Frame3 = () => {
           placeholder="Ім'я"
           value={registrationData.LastName}
           onChange={handleInputChange}
-        />      
+        />
         <input
           type="text"
           name="Batya"
@@ -93,11 +93,10 @@ const Frame3 = () => {
           placeholder="По батькові"
           value={registrationData.Batya}
           onChange={handleInputChange}
-        />    
-
+        />
         <input
           type="text"
-          name="Email"
+          name="email"
           className="e-mail3"
           placeholder="E-mail"
           value={registrationData.email}
