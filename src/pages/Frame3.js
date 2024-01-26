@@ -5,7 +5,9 @@ import axios from 'axios';
 
 const Frame3 = () => {
   const [registrationData, setRegistrationData] = useState({
-    Fullname: "",
+    FirstName: "",
+    LastName: "",
+    Batya: "",
     email: "",
     Password: "",
     PhoneNumber: "",
