@@ -9,7 +9,7 @@ app = Flask(__name__)
 Base = sqlalchemy.orm.declarative_base()
 
 class User(Base):
-    tablename = 'users'
+    __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True)
     lastname = Column(String, nullable=False)
