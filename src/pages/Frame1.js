@@ -40,10 +40,10 @@ const Frame1 = () => {
 
       <input
         type="text"
-        name="email"
+        name="Email"
         className="e-mail"
         placeholder="E-mail"
-        value={loginData.email}
+        value={loginData.Email}
         onChange={handleInputChange}
       />
       <input

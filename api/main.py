@@ -15,7 +15,7 @@ class User(Base):
     FirstName = Column(String, nullable=False)
     LastName = Column(String, nullable=False)
     Batya = Column(String, nullable=False)
-    Email = Column(String, unique=True, nullable=False)
+    Email = Column(String, unique=False, nullable=False)
     Password = Column(String, nullable=False)
     PhoneNumber = Column(String, nullable=False)
     Address = Column(String, nullable=False)
@@ -30,7 +30,7 @@ session = Session()
 def register_user():
     data = request.json
 
-    existing_user = session.query(User).filter_by(email=data['Email']).first()
+    existing_user = session.query(User).filter_by(Email=data['Email']).first()
     if existing_user:
         session.rollback()
         return jsonify({"error": "Пользователь с таким email уже существует."}), 400
@@ -39,7 +39,7 @@ def register_user():
         FirstName=data['FirstName'],
         LastName=data['LastName'],
         Batya=data['Batya'],
-        email=data['Email'],
+        Email=data['Email'],
         Password=data['Password'],
         PhoneNumber=data['PhoneNumber'],
         Address=data['Address'],
