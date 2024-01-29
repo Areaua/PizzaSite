@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from werkzeug.security import check_password_hash
 import sqlalchemy
 
-app = Flask(name)
+app = Flask(__name__)
 
 Base = sqlalchemy.orm.declarative_base()
 
@@ -61,5 +61,5 @@ def login_user():
     else:
         return jsonify({"error": "Неправильный email или пароль."}), 401
 
-if name == 'main':
+if __name__ == 'main':
     app.run(debug=True, port=3000)
