@@ -40,7 +40,7 @@ const Frame1 = () => {
 
       <input
         type="text"
-        name="Email"
+        name="email"
         className="e-mail"
         placeholder="E-mail"
         value={loginData.email}

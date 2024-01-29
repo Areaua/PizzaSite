@@ -73,7 +73,7 @@ const Frame3 = () => {
 
         <input
           type="text"
-          name="FirstName"
+          name="lastname"
           className="b25"
           placeholder="Призвище"
           value={registrationData.lastname}
@@ -82,7 +82,7 @@ const Frame3 = () => {
 
         <input
           type="text"
-          name="LastName"
+          name="name"
           className="b26"
           placeholder="Ім'я"
           value={registrationData.name}
@@ -90,7 +90,7 @@ const Frame3 = () => {
         />
         <input
           type="text"
-          name="Batya"
+          name="patronymic"
           className="b27"
           placeholder="По батькові"
           value={registrationData.patronymic}
@@ -98,7 +98,7 @@ const Frame3 = () => {
         />
         <input
           type="text"
-          name="Email"
+          name="email"
           className="e-mail3"
           placeholder="E-mail"
           value={registrationData.email}
@@ -106,7 +106,7 @@ const Frame3 = () => {
         />
         <input
           type="password"
-          name="Password"
+          name="password"
           className="b22"
           placeholder="Password"
           value={registrationData.password}
@@ -114,7 +114,7 @@ const Frame3 = () => {
         />
         <input
           type="text"
-          name="PhoneNumber"
+          name="phone_number"
           className="b23"
           placeholder="Phone Number"
           value={registrationData.phone_number}
@@ -122,7 +122,7 @@ const Frame3 = () => {
         />
         <input
           type="text"
-          name="Address"
+          name="address"
           className="b24"
           placeholder="Address"
           value={registrationData.address}
