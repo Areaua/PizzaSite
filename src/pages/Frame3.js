@@ -98,9 +98,9 @@ const Frame3 = () => {
         />
         <input
           type="text"
-          name="email"
+          name="e-mail"
           className="e-mail3"
-          placeholder="E-mail"
+          placeholder="e-mail"
           value={registrationData.email}
           onChange={handleInputChange}
         />
