@@ -8,7 +8,7 @@ const Frame3 = () => {
     FirstName: "",
     LastName: "",
     Batya: "",
-    email: "",
+    Email: "",
     Password: "",
     PhoneNumber: "",
     Address: "",

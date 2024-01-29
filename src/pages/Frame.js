@@ -7,8 +7,8 @@ import axios from 'axios';
 const Frame = () => {
 
   const [loginData, setLoginData] = useState({
-    email: "",
-    password: "",
+    Email: "",
+    Password: "",
   });
 
   const history = useNavigate();
@@ -43,10 +43,10 @@ const Frame = () => {
 
       <input
         type="text"
-        name="email"
+        name="Email"
         className="e-mail"
-        placeholder="E-mail"
-        value={loginData.email}
+        placeholder="Email"
+        value={loginData.Email}
         onChange={handleInputChange}
       />
       <input
@@ -54,7 +54,7 @@ const Frame = () => {
         name="password"
         className="b"
         placeholder="Пароль"
-        value={loginData.password}
+        value={loginData.Password}
         onChange={handleInputChange}
       />
 

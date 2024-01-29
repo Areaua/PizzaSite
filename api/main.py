@@ -15,7 +15,7 @@ class User(Base):
     FirstName = Column(String, nullable=False)
     LastName = Column(String, nullable=False)
     Batya = Column(String, nullable=False)
-    email = Column(String, unique=True, nullable=False)
+    Email = Column(String, unique=True, nullable=False)
     Password = Column(String, nullable=False)
     PhoneNumber = Column(String, nullable=False)
     Address = Column(String, nullable=False)
@@ -54,7 +54,7 @@ def register_user():
 def login_user():
     data = request.json
 
-    user = session.query(User).filter_by(email=data['Email']).first()
+    user = session.query(User).filter_by(Email=data['Email']).first()
 
     if user and check_password_hash(user.Password, data['Password']):
         return jsonify({"message": "Авторизация успешна.", "token": "ваш_токен_jwt"}), 200
