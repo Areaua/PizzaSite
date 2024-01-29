@@ -5,13 +5,13 @@ import axios from 'axios';
 
 const Frame3 = () => {
   const [registrationData, setRegistrationData] = useState({
-    FirstName: "",
-    LastName: "",
-    Batya: "",
-    Email: "",
-    Password: "",
-    PhoneNumber: "",
-    Address: "",
+    lastname: "",
+    name: "",
+    patronymic: "",
+    email: "",
+    password: "",
+    phone_number: "",
+    address: "",
   });
 
   const history = useNavigate();
@@ -76,7 +76,7 @@ const Frame3 = () => {
           name="FirstName"
           className="b25"
           placeholder="Призвище"
-          value={registrationData.FirstName}
+          value={registrationData.lastname}
           onChange={handleInputChange}
         />
 
@@ -85,7 +85,7 @@ const Frame3 = () => {
           name="LastName"
           className="b26"
           placeholder="Ім'я"
-          value={registrationData.LastName}
+          value={registrationData.name}
           onChange={handleInputChange}
         />
         <input
@@ -93,7 +93,7 @@ const Frame3 = () => {
           name="Batya"
           className="b27"
           placeholder="По батькові"
-          value={registrationData.Batya}
+          value={registrationData.patronymic}
           onChange={handleInputChange}
         />
         <input
@@ -101,7 +101,7 @@ const Frame3 = () => {
           name="Email"
           className="e-mail3"
           placeholder="E-mail"
-          value={registrationData.Email}
+          value={registrationData.email}
           onChange={handleInputChange}
         />
         <input
@@ -109,7 +109,7 @@ const Frame3 = () => {
           name="Password"
           className="b22"
           placeholder="Password"
-          value={registrationData.Password}
+          value={registrationData.password}
           onChange={handleInputChange}
         />
         <input
@@ -117,7 +117,7 @@ const Frame3 = () => {
           name="PhoneNumber"
           className="b23"
           placeholder="Phone Number"
-          value={registrationData.PhoneNumber}
+          value={registrationData.phone_number}
           onChange={handleInputChange}
         />
         <input
@@ -125,7 +125,7 @@ const Frame3 = () => {
           name="Address"
           className="b24"
           placeholder="Address"
-          value={registrationData.Address}
+          value={registrationData.address}
           onChange={handleInputChange}
         />
       </div>
