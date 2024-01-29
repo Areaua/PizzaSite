@@ -6,7 +6,7 @@ import axios from 'axios';
 const Frame1 = () => {
   const [loginData, setLoginData] = useState({
     email: "",
-    password: "",
+    Password: "",
   });
 
   const history = useNavigate();
@@ -51,7 +51,7 @@ const Frame1 = () => {
         name="password"
         className="b"
         placeholder="Пароль"
-        value={loginData.password}
+        value={loginData.Password}
         onChange={handleInputChange}
       />
 
