@@ -8,7 +8,7 @@ const Frame3 = () => {
     FirstName: "",
     LastName: "",
     Batya: "",
-    email: "",
+    Email: "",
     Password: "",
     PhoneNumber: "",
     Address: "",
@@ -98,9 +98,9 @@ const Frame3 = () => {
         />
         <input
           type="text"
-          name="e-mail"
+          name="email"
           className="e-mail3"
-          placeholder="e-mail"
+          placeholder="E-mail"
           value={registrationData.email}
           onChange={handleInputChange}
         />
