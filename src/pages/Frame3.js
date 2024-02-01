@@ -5,13 +5,13 @@ import axios from 'axios';
 
 const Frame3 = () => {
   const [registrationData, setRegistrationData] = useState({
-    FirstName: "",
-    LastName: "",
-    Batya: "",
-    Email: "",
-    Password: "",
-    PhoneNumber: "",
-    Address: "",
+    lastname: "",
+    name: "",
+    patronymic: "",
+    email: "",
+    password: "",
+    phone_number: "",
+    address: "",
   });
 
   const history = useNavigate();
@@ -73,27 +73,27 @@ const Frame3 = () => {
 
         <input
           type="text"
-          name="FirstName"
+          name="lastname"
           className="b25"
           placeholder="Призвище"
-          value={registrationData.FirstName}
+          value={registrationData.lastname}
           onChange={handleInputChange}
         />
 
         <input
           type="text"
-          name="LastName"
+          name="name"
           className="b26"
           placeholder="Ім'я"
-          value={registrationData.LastName}
+          value={registrationData.name}
           onChange={handleInputChange}
         />
         <input
           type="text"
-          name="Batya"
+          name="patronymic"
           className="b27"
           placeholder="По батькові"
-          value={registrationData.Batya}
+          value={registrationData.patronymic}
           onChange={handleInputChange}
         />
         <input
@@ -106,26 +106,26 @@ const Frame3 = () => {
         />
         <input
           type="password"
-          name="Password"
+          name="password"
           className="b22"
           placeholder="Password"
-          value={registrationData.Password}
+          value={registrationData.password}
           onChange={handleInputChange}
         />
         <input
           type="text"
-          name="PhoneNumber"
+          name="phone_number"
           className="b23"
           placeholder="Phone Number"
-          value={registrationData.PhoneNumber}
+          value={registrationData.phone_number}
           onChange={handleInputChange}
         />
         <input
           type="text"
-          name="Address"
+          name="address"
           className="b24"
           placeholder="Address"
-          value={registrationData.Address}
+          value={registrationData.address}
           onChange={handleInputChange}
         />
       </div>
