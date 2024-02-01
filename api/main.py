@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from sqlalchemy import create_engine, Column, String, Integer
 from sqlalchemy.orm import sessionmaker
 from werkzeug.security import check_password_hash
+from werkzeug.security import generate_password_hash
 import sqlalchemy
 
 app = Flask(__name__)
@@ -34,12 +35,14 @@ def register_user():
         session.rollback()
         return jsonify({"error": "Користувач з такою електронною поштою вже існує."}), 400
 
+    hashed_password = generate_password_hash(data['Password'], method='sha256')
+
     new_user = User(
         lastname=data['LastName'],
         name=data['Name'],
         patronymic=data['Patronymic'],
         email=data['Email'],
-        password=data['Password'],
+        password=hashed_password,
         phone_number=data['PhoneNumber'],
         address=data['Address'],
     )
@@ -48,6 +51,7 @@ def register_user():
     session.commit()
 
     return jsonify({"message": "Користувач успішно зареєстрований."})
+
 
 
 @app.route('/api/login', methods=['POST'])
@@ -61,5 +65,5 @@ def login_user():
     else:
         return jsonify({"error": "Неправильный email или пароль."}), 401
 
-if __name__ == 'main':
+if __name__ == '__main__':
     app.run(debug=True, port=3000)
