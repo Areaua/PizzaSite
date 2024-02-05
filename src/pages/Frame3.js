@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Frame3.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import RegistrationSuccess from './Reg';
+import RegistrationError from './RegErr'; // Импорт компонента RegistrationError
 
 const Frame3 = () => {
   const [registrationData, setRegistrationData] = useState({
@@ -14,6 +16,9 @@ const Frame3 = () => {
     address: "",
   });
 
+  const [showRegistrationSuccess, setShowRegistrationSuccess] = useState(false);
+  const [showRegistrationError, setShowRegistrationError] = useState(false);
+  const [errorMesssage, setErrorMessage] = useState("");
   const history = useNavigate();
 
   const handleInputChange = (e) => {
@@ -28,13 +33,23 @@ const Frame3 = () => {
     axios.post('/api/register', registrationData)
       .then(response => {
         console.log(response.data.message);
-        // Optionally, you can redirect the user to a success page or perform other actions.
-        history.push('/');
+        setShowRegistrationSuccess(true);
       })
       .catch(error => {
         console.error('Error registering user:', error.response.data.error);
-        // Handle registration error (display error message, etc.)
+        setErrorMessage(error.response.data.error);
+        setShowRegistrationError(true);
       });
+  };
+
+  const handleCloseRegistrationSuccess = () => {
+    setShowRegistrationSuccess(false);
+    // Опционально, вы можете выполнить другие действия после закрытия окна
+    history.push('/');
+  };
+
+  const handleCloseRegistrationError = () => {
+    setShowRegistrationError(false);
   };
 
   return (
@@ -44,9 +59,7 @@ const Frame3 = () => {
       <b className="b18">Реєстрація</b>
       <div className="div27">
         <div className="div28" />
-        <Link to="/">
           <button className="b19" onClick={handleRegistration}>Продовжити</button>
-        </Link>
       </div>
       <div className="div29">
         <div className="div30">

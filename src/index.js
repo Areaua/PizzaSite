@@ -7,6 +7,8 @@ import Frame from "./pages/Frame";
 import Frame1 from "./pages/Frame1";
 import Frame2 from "./pages/Frame2";
 import Frame3 from "./pages/Frame3";
+import RegErr from "./pages/RegErr";
+import Reg from "./pages/Reg";
 import "./global.css";
 
 const container = document.getElementById("root");
@@ -19,6 +21,8 @@ root.render(
       <Route path="/supplier" element={<Frame1 />} />
       <Route path="/manager" element={<Frame />} />
       <Route path="/register" element={<Frame3 />} />
+      <Route path="/RegErr" element={<RegErr />} />
+      <Route path="/Reg" element={<Reg />} />
     </Routes>
   </BrowserRouter>,
 );
