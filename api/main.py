@@ -26,7 +26,7 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-@app.route('/api/main', methods=['POST'])
+@app.route('/api/register', methods=['POST'])
 def register_user():
     data = request.json
 

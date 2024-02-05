@@ -30,7 +30,7 @@ const Frame3 = () => {
   };
 
   const handleRegistration = () => {
-    axios.post('/api/main', registrationData)
+    axios.post('/api/register', registrationData)
       .then(response => {
         console.log(response.data.message);
         setShowRegistrationSuccess(true);
