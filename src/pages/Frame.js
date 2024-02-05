@@ -8,7 +8,7 @@ const Frame = () => {
 
   const [loginData, setLoginData] = useState({
     email: "",
-    password: "",
+    Password: "",
   });
 
   const history = useNavigate();
@@ -54,7 +54,7 @@ const Frame = () => {
         name="password"
         className="b"
         placeholder="Пароль"
-        value={loginData.password}
+        value={loginData.Password}
         onChange={handleInputChange}
       />
 
